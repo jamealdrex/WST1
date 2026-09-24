@@ -1,0 +1,2 @@
+@extends('layouts.app', ['title' => 'Edit task'])
+@section('content')<div class="intro"><div><div class="eyebrow">Make an adjustment</div><h1>Edit task.</h1></div><a class="button light" href="{{ route('tasks.index') }}">Back to list</a></div><section class="panel" style="max-width:700px;">@include('tasks.form', ['formAction' => route('tasks.update', $task), 'method' => 'PUT', 'submitLabel' => 'Save changes'])</section>@endsection
